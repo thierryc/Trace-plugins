@@ -1,0 +1,26 @@
+{
+  "name": "tracer-tools-plugins",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev:web & npm run dev:figma & npm run dev:sketch & npm run dev:penpot",
+    "dev:web": "npm run dev -w packages/web-app",
+    "dev:figma": "npm run dev -w packages/figma-plugin",
+    "dev:sketch": "npm run dev -w packages/sketch-plugin",
+    "dev:penpot": "npm run dev -w packages/penpot-plugin",
+    "build": "npm run build --workspaces",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.3",
+    "vite": "^6.0.2"
+  },
+  "engines": {
+    "npm": ">=10"
+  },
+  "packageManager": "npm@10.0.0"
+}

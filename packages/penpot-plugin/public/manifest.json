@@ -1,0 +1,11 @@
+{
+  "name": "Tracer",
+  "host": "https://tracer-penpot-plugin.vercel.app",
+  "code": "plugin.js",
+  "description": "Tracer plugin for Penpot by thierryc on github.com",
+  "icon": "/icon.png",
+  "permissions": [
+    "content:read",
+    "content:write"
+  ]
+}

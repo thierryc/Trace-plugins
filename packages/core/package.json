@@ -1,0 +1,16 @@
+{
+  "name": "@ap.cx/tracer-core",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "potrace": "^2.1.8"
+  },
+  "devDependencies": {
+    "@types/potrace": "^2.1.4"
+  }
+}

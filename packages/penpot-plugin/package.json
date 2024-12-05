@@ -1,0 +1,16 @@
+{
+  "name": "@ap.cx/trace-penpot-plugin",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite build --watch & vite preview",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "author": "Thierry Charbonnel",
+  "dependencies": {
+    "@ap.cx/tracer-core": "1.0.0",
+    "@penpot/plugin-styles": "1.0.0",
+    "@penpot/plugin-types": "1.0.0"
+  }
+}

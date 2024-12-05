@@ -1,0 +1,16 @@
+{
+  "name": "@ap.cx/trace-sketch-plugin",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ap.cx/tracer-core": "1.0.0"
+  },
+  "devDependencies": {
+    "@skpm/builder": "^0.9.0"
+  }
+}

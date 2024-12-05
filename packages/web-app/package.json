@@ -1,0 +1,15 @@
+{
+  "name": "@ap.cx/trace-web-app",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ap.cx/tracer-core": "1.0.0"
+  },
+  "devDependencies": {
+  }
+}

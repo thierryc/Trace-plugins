@@ -1,0 +1,18 @@
+{
+  "name": "@ap.cx/trace-figma-plugin",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite build --watch & vite preview",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "author": "Thierry Charbonnel",
+  "dependencies": {
+    "@ap.cx/tracer-core": "1.0.0",
+    "@figma/plugin-typings": "^1.82.0"
+  },
+  "devDependencies": {
+    "vite-plugin-html": "^3.2.2"
+  }
+}
