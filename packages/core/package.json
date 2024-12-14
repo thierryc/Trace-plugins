@@ -5,6 +5,7 @@
   "main": "src/index.ts",
   "license": "GPL-2.0",
   "scripts": {
+    "build": "echo 'no build'",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
