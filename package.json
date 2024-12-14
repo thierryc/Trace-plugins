@@ -17,6 +17,7 @@
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {
+    "@figma/plugin-typings": "^1.105.0",
     "typescript": "^5.5.3",
     "vite": "^6.0.2"
   },
