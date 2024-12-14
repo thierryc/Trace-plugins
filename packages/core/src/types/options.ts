@@ -6,12 +6,19 @@ export interface PotraceOptions {
   optTolerance: number;
   threshold: number;
   blackOnWhite: boolean;
+  color: 'auto' | string;
+  background: 'transparent' | string;
+}
+
+export interface PosterizeOptions {
+  fillStrategy: 'dominant' | 'mean' | 'median' | 'spread';
+  rangeDistribution?: 'auto' | 'equal';
+  steps?: 'auto' | number | number[];
 }
 
 export interface SvgOptions {
   mode: 'color' | 'monochrome';
   color: string;
-  background: string;
 }
 
-export interface ImageProcessingOptions extends PotraceOptions, SvgOptions {}
+export interface ImageProcessingOptions extends PotraceOptions, PosterizeOptions, SvgOptions {}

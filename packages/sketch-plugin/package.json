@@ -2,6 +2,7 @@
   "name": "@ap.cx/trace-sketch-plugin",
   "version": "1.0.0",
   "type": "module",
+  "license": "GPL-2.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

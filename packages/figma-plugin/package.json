@@ -1,7 +1,8 @@
 {
-  "name": "@ap.cx/trace-figma-plugin",
+  "name": "@ap.cx/tracer-figma-plugin",
   "version": "1.0.0",
   "type": "module",
+  "license": "GPL-2.0",
   "scripts": {
     "dev": "vite build --watch & vite preview",
     "build": "tsc && vite build",
@@ -13,6 +14,7 @@
     "@figma/plugin-typings": "^1.82.0"
   },
   "devDependencies": {
+    "@types/potrace": "^2.1.5",
     "vite-plugin-html": "^3.2.2"
   }
 }

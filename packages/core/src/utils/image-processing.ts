@@ -4,6 +4,8 @@ import type { ImageProcessingOptions } from '../types/options';
 // Properly wrap potrace.trace in a promise
 const tracePromise = (imageData: Buffer | string, options?: ImageProcessingOptions): Promise<string> => {
   const potraceOptions = options ? options : {};
+  console.log('tracePromise', potraceOptions);
+  
   return new Promise((resolve, reject) => {
     potrace.trace(imageData, potraceOptions, (err, svgData) => {
       if (err) {
@@ -18,6 +20,7 @@ const tracePromise = (imageData: Buffer | string, options?: ImageProcessingOptio
 // Properly wrap potrace.trace in a promise
 const posterizePromise = (imageData: Buffer | string, options?: ImageProcessingOptions): Promise<string> => {
   const potraceOptions = options ? options : {};
+  console.log('posterizePromise', potraceOptions);
   return new Promise((resolve, reject) => {
     potrace.posterize(imageData, potraceOptions, (err, svgData) => {
       if (err) {
@@ -35,7 +38,7 @@ export const imageToSvg = async (
   options: ImageProcessingOptions
 ): Promise<string> => {
 
-  console.log(options);
+  console.log('options:', options.steps);
 
   try {
     const potraceOptions: ImageProcessingOptions = {
@@ -46,10 +49,16 @@ export const imageToSvg = async (
       optTolerance: options.optTolerance,
       threshold: options.threshold,
       blackOnWhite: options.blackOnWhite,
-      color: options.mode === 'monochrome' ? options.color : '#000000',
+      color: options.color,
       background: options.background,
-      mode: options.mode
+      mode: options.mode,
+      fillStrategy: options.fillStrategy,
+      rangeDistribution: options.rangeDistribution,
     };
+
+    if (Array.isArray(options.steps) || typeof options.steps === 'number' && options.steps > 0) {
+      potraceOptions.steps = options.steps;
+    }
 
     let svgData;
 

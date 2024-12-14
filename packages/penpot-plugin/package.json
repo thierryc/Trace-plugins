@@ -1,5 +1,5 @@
 {
-  "name": "@ap.cx/trace-penpot-plugin",
+  "name": "@ap.cx/tracer-penpot-plugin",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
@@ -10,7 +10,9 @@
   "author": "Thierry Charbonnel",
   "dependencies": {
     "@ap.cx/tracer-core": "1.0.0",
-    "@penpot/plugin-styles": "1.0.0",
-    "@penpot/plugin-types": "1.0.0"
+    "@penpot/plugin-styles": "1.1.0"
+  },
+  "devDependencies": {
+    "@penpot/plugin-types": "1.1.0"
   }
 }

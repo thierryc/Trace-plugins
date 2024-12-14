@@ -1,16 +1,16 @@
 import type { PluginMessageEvent, PluginUIEvent } from './model.ts';
 
-
 penpot.ui.open('Tracer', `?theme=${penpot.theme}`, {
     width: 292,
     height: 540,
 });
 
-
 penpot.ui.onMessage<PluginUIEvent>((message) => {
+
+    console.log(message);
+    
     if (message.type === 'insert-svg') {
         const { name, svg } = message.content;
-
         if (!svg || !name) {
             return;
         }
